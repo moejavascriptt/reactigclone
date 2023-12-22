@@ -10,7 +10,7 @@ export default function AuthForm () {
     confirmPassword: ''
   })
   const handleAuth = () => {
-    if (inputs.email || inputs.password) {
+    if (!inputs.email || !inputs.password) {
       alert('Please fill all the fields')
       return
     }
@@ -90,7 +90,7 @@ export default function AuthForm () {
       <Box border={'1px solid gray'} borderRadius={4} padding={5}>
         <Flex alignItems={'center'} justifyContent={'center'}>
           <Box mx={2} fontSize={14}>
-            {isLogin ? "Already have an account?" : 'Dont have an account?'}
+            {isLogin ? 'Already have an account?' : 'Dont have an account?'}
           </Box>
           <Box
             onClick={() => setIsLogin(!isLogin)}
