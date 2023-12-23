@@ -14,7 +14,7 @@ import {
   UnlikeLogo
 } from '../../assets/constants'
 
-export default function PostFooter () {
+export default function PostFooter ({ username }) {
   const [liked, setLiked] = useState(0)
   const [likes, setLikes] = useState(500)
 
@@ -43,7 +43,7 @@ export default function PostFooter () {
         {likes} likes
       </Text>
       <Text fontSize='sm' fontWeight={700}>
-        moestax_{''}
+        {username}
         <Text as='span' fontWeight={400}>
           Feeling great
         </Text>
